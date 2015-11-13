@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en" manifest="offline.appcache">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>A CHANGE OF HEART</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+    <!-- CSS FOR PART 3: ORIGINS OF FLY AND PART 7: FLY FOILS FLY FIGHTS FLY FORTUNATE  -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    <link rel="stylesheet" href="../../bower_components/reveal.js/css/theme/sky.css" id="theme">
+    <link rel="stylesheet" href="../../bower_components/reveal.js/css/reveal.min2.css">
+
+    <!-- CSS FOR QUIZ -->
+    <!--        <link rel="stylesheet" href="quiz/css/normalize.css">
+            <link rel="stylesheet" href="quiz/css/main.css">-->
+
+    <!--BULLET CODE -->
+    <link rel="manifest" href="app.manifest"/>
+
+    <link rel="stylesheet" href="css/application.css">
+    <!--[if lt IE 9]>
+    <!--suppress HtmlUnknownTarget -->
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
+    <script src="js/jquery-2.0.2.min.js"></script>
+
+
+    <script src="js/jquery.1.10.3-ui.js"></script>
+
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+    <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+
+
+    <!-- CSS FOR QUIZ -->
+    <link rel="stylesheet" href="quiz/css/normalize.css">
+    <link rel="stylesheet" href="quiz/css/main.css">
+
+    <!-- AUDIO -->
+
+
+
+
+    <!--[if lt IE 9]>
+    <script src="bower_components/reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<audio id="nakedcall" class="auto" loop data-ignore>
+    <source src="songs/nakedcall.mp3" type="audio/mpeg">
+    <source src="songs/nakedcall.ogg" type="audio/ogg">
+    <!--mp3 verison-->
+</audio>
+
+<audio id="manstitutes" class="auto" data-ignore>
+    <source src="songs/manstitutes.mp3" type="audio/mpeg">
+    <source src="songs/manstitutes.ogg" type="audio/ogg">
+</audio>
+
+<audio id="bar" class="auto" loop data-ignore>
+    <source src="songs/bar.mp3" type="audio/mpeg">
+    <source src="songs/bar.ogg" type="audio/ogg">
+</audio>
+
+<audio id="ding" class="auto" data-ignore>
+    <source src="songs/ding.mp3" type="audio/mpeg">
+    <source src="songs/ding.ogg" type="audio/ogg">
+    <!--mp3 verison-->
+</audio>
+
+
+<div class="reveal">
+    <div class="slides">
+
+        <section>
+            <h1>Start</h1>
+        </section>
+        <section data-sounds="nakedcall">
+            <h1>start nakedcall</h1>
+
+            <h2>nakedcall</h2>
+
+
+            <h1>stop bar</h1>
+        </section>
+        <section data-sounds="nakedcall, bar">
+            <h1>start bar</h1>
+
+            <h2>nakedcall,bar</h2>
+
+            <h1>stop ding, start nakedcall</h1>
+        </section>
+        <section data-sounds="bar, ding">
+            <h1>stop nakedcall and start ding</h1>
+
+            <h2>bar,ding</h2>
+        </section>
+    </div>
+
+</div>
+
+
+<script src="js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+<script  src="js/audio-new.js"></script>
+
+
+<script>
+
+    Reveal.initialize({
+        synchronousSlideChange: audioHandler,
+        controls: true,
+        progress: true,
+        history: false,
+
+        center: false,
+        theme: 'sky',// default/beige/sky/moon/night/serif/simple/base/solarized
+        rollingLinks: false,
+        loop: true,
+        width: '100%',
+        margin: '0',
+        height: '100%',
+        keyboard: true,
+        transition: 'zoom', // default/cube/page/concave/zoom/linear/fade/none
+
+        autoSlide: 0,
+        autoSlideStoppable: false,
+
+
+        dependencies: [
+            {
+                src: 'js/classList.js', condition: function () {
+                return !document.body.classList;
+            }
+            }
+            // { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            // { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            // { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            // { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+            // { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+            // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+    });
+
+
+</script>
+
+
+</body>
+</html>
