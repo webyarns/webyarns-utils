@@ -17,15 +17,13 @@
         nextSounds = soundData?.split(",").map((e)->e.trim()) or []
         prevSoundData = $(e.previousSlide).data('sounds')
         currentSounds = prevSoundData?.split(",").map((e)->e.trim()) or []
-        console.log("previous",JSON.stringify(currentSounds),"next",JSON.stringify(nextSounds))
         nextSounds.forEach (soundId) ->
             fadeIn(soundId) if not (soundId in currentSounds)
             currentSounds = currentSounds.filter (id) -> id isnt soundId
-        console.log("left sounrds are ",currentSounds)
         currentSounds.forEach((soundId) -> fadeOut(soundId))
 
 
-    Reveal.addEventListener('ready', audioHandler)
-    Reveal.addEventListener('slidechanged', audioHandler)
+    #Reveal.addEventListener('ready', audioHandler)
+#    Reveal.addEventListener('slidechanged', audioHandler)
     root = exports ? this
     root.audioHandler = audioHandler) jQuery
