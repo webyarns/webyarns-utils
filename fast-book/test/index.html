@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html id="bibi">
+
+
+
+	<head>
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+		<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" /><![endif]-->
+
+		<title>BiB/i | EPUB Reader on your website.</title>
+
+
+		<script src="../../bower_components/epub.js/build/epub.min.js"></script>
+        <script src="../../bower_components/jszip/dist/jszip.min.js"></script>
+
+
+
+
+	</head>
+
+
+
+	<body>
+
+
+
+	<div class="book" id="moby"></div>
+
+
+	</body>
+
+	<script>
+		var mobyBook = ePub("bookshelf/moby.epub");
+		mobyBook.renderTo("moby");
+        window.setInterval(function(){
+            mobyBook.nextPage();
+        }, 50);
+	</script>
+
+</html>
