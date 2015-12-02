@@ -1,43 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
 
-<html id="bibi">
+<head>
+    <meta charset="utf-8">
 
+    <title>reveal.js - The HTML Presentation Framework</title>
 
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
 
-	<head>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
-		<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" /><![endif]-->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<title>BiB/i | EPUB Reader on your website.</title>
+    <link rel="stylesheet" href="../../bower_components/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../../bower_components/reveal.js/css/theme/black.css" id="theme">
 
-
-		<script src="../../bower_components/epub.js/build/epub.min.js"></script>
-        <script src="../../bower_components/jszip/dist/jszip.min.js"></script>
-
-
-
-
-	</head>
-
-
-
-	<body>
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="../../bower_components/reveal.js/lib/css/zenburn.css">
 
 
+    <!--[if lt IE 9]>
+    <script src="../../bower_components/reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
 
-	<div class="book" id="moby"></div>
+<body>
+
+<div class="reveal">
+    <div class="slides">
 
 
-	</body>
+        <section>
+            <h1>start</h1>
+        </section>
+        <section>
+            <h2>Moby</h2>
+            <div id="moby" class="book" data-book-url="bookshelf/moby.epub" data-page-interval="50"></div>
+        </section>
 
-	<script>
-		var mobyBook = ePub("bookshelf/moby.epub");
-		mobyBook.renderTo("moby");
-        window.setInterval(function(){
-            mobyBook.nextPage();
-        }, 50);
-	</script>
+        <section>
+            <h2>Voltaire - Candide</h2>
+            <div id="candide" class="book" data-book-url="bookshelf/candide.epub" data-page-interval="1000"></div>
+        </section>
 
+    </div>
+
+</div>
+
+
+<script src="../../bower_components/reveal.js/lib/js/head.min.js"></script>
+<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../../bower_components/reveal.js/js/reveal.js"></script>
+
+<script src="../../bower_components/epub.js/build/epub.min.js"></script>
+<script src="../../bower_components/jszip/dist/jszip.min.js"></script>
+
+<script src="../fastbook.js"></script>
+
+
+<script>
+
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+            {
+                src: '../../bower_components/reveal.js/lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            }
+            }
+        ]
+    });
+
+
+
+</script>
+
+
+</body>
 </html>
