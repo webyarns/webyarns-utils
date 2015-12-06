@@ -20,11 +20,16 @@
 
     <!-- Code syntax highlighting -->
     <link rel="stylesheet" href="../../bower_components/reveal.js/lib/css/zenburn.css">
+    <style type="text/css">
+
+    </style>
 
 
     <!--[if lt IE 9]>
     <script src="../../bower_components/reveal.js/lib/js/html5shiv.js"></script>
     <![endif]-->
+
+
 </head>
 
 <body>
@@ -36,29 +41,33 @@
         <section>
             <h1>start</h1>
         </section>
-        <section>
-            <h2>Moby</h2>
-            <div id="moby" class="book" data-book-url="bookshelf/moby.epub" data-page-interval="50"></div>
-        </section>
+       <section data-background-iframe="bib/index.html?book=moby#pipi(autostart:true)" data-page-interval="50">
+
+
+       </section>
 
         <section>
-            <h2>Voltaire - Candide</h2>
-            <div id="candide" class="book" data-book-url="bookshelf/candide.epub" data-page-interval="1000"></div>
+            <h2>After</h2>
         </section>
+
+        <section data-background-iframe="bib/index.html?book=candide.epub#pipi(autostart:true)" data-page-interval="50">
+
+
+        </section>
+
 
     </div>
 
 </div>
 
-
 <script src="../../bower_components/reveal.js/lib/js/head.min.js"></script>
 <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
 <script src="../../bower_components/reveal.js/js/reveal.js"></script>
+<script src="bib/fast-book-bibi.js"></script>
 
-<script src="../../bower_components/epub.js/build/epub.min.js"></script>
-<script src="../../bower_components/jszip/dist/jszip.min.js"></script>
 
-<script src="../fastbook.js"></script>
+
+
 
 
 <script>
@@ -68,8 +77,8 @@
     Reveal.initialize({
         controls: true,
         progress: true,
-        history: true,
-        center: true,
+        history: false,
+        center: false,
 
         transition: 'slide', // none/fade/slide/convex/concave/zoom
 
