@@ -41,20 +41,21 @@
         <section>
             <h1>start</h1>
         </section>
-       <section data-background-iframe="bib/index.html?book=moby#pipi(autostart:true)" data-page-interval="50">
+       <section data-background-animated-gif="http://www.webyarns.com/fast/animations/littled.gif" data-page-interval="50">
 
 
        </section>
-
         <section>
-            <h2>After</h2>
+            <h2>after</h2>
         </section>
-
-        <section data-background-iframe="bib/index.html?book=candide.epub#pipi(autostart:true)" data-page-interval="50">
+        <section data-background-animated-gif="http://www.webyarns.com/fast/animations/littled.gif" data-page-interval="50">
 
 
         </section>
-
+<section>
+    <h2>done</h2>
+    <h2>done</h2>
+</section>
 
     </div>
 
@@ -63,7 +64,6 @@
 <script src="../../bower_components/reveal.js/lib/js/head.min.js"></script>
 <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
 <script src="../../bower_components/reveal.js/js/reveal.js"></script>
-<script src="bib/fast-book-bibi.js"></script>
 
 
 
@@ -94,6 +94,33 @@
 
 
 
+Reveal.addEventListener('slidechanged', function (event) {
+    var $current = $(event.currentSlide);
+    var data = $current.data("background-animated-gif");
+
+    if (data){
+        var background = Reveal.getSlideBackground(event.indexh, event.indexv);
+
+        var ua = window.navigator.userAgent;
+        ie = (ua.indexOf("MSIE ") >0) || (ua.indexOf('Trident/') > 0);
+        if (ie>0){
+            $(".background-animated-gif").remove();
+            data = data + "?load=" + new Date().getTime();
+        }
+        var children = $(background).children(".background-animated-gif");
+        if (children.length==0){
+        var img = $('<img class="background-animated-gif" style="min-width: 100%;min-height: 100%;height: auto;width: auto">').attr("src",data);
+        $(background).prepend(img)
+        } else {
+            children.each(function(i, e){
+                $(e).attr("src",data)
+            });
+        }
+
+
+    }
+
+});
 </script>
 
 

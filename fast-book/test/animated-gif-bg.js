@@ -2,6 +2,12 @@ Reveal.addEventListener('slidechanged', function (event) {
 
     var backgroundNext = Reveal.getSlideBackground(event.indexh, event.indexv);
     var backgroundPrev = Reveal.getSlideBackground(event.indexh-1, event.indexv);
+
+    var data = event.currentSlide.data("animated-gif-bg");
+    if (data){
+
+    }
+
     foo(backgroundPrev, function (c) {
         c.pause();
     });
