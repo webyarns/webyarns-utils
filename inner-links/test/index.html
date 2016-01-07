@@ -20,16 +20,11 @@
 
     <!-- Code syntax highlighting -->
     <link rel="stylesheet" href="../../bower_components/reveal.js/lib/css/zenburn.css">
-    <style type="text/css">
-
-    </style>
 
 
     <!--[if lt IE 9]>
     <script src="../../bower_components/reveal.js/lib/js/html5shiv.js"></script>
     <![endif]-->
-
-
 </head>
 
 <body>
@@ -37,39 +32,34 @@
 <div class="reveal">
     <div class="slides">
 
-
         <section>
-            <h1>start</h1>
+            <h1>Start</h1>
         </section>
-       <section data-background-animated-gif="http://www.webyarns.com/fast/animations/littled.gif" data-page-interval="50">
-            <div class="animated-gif-container" title="image" width="100%" height="100%" >
-
-            </div>
-
-       </section>
         <section>
-            <h2>after</h2>
+            <h1>Just a section</h1>
+            <ul>
+
+                <li>Link to <a href="#" data-link="4">slide#</a></li>
+            </ul>
         </section>
-        <section data-background-animated-gif="http://www.webyarns.com/fast/animations/littled.gif" data-page-interval="50">
+        <section>
+            <h1>Slide 3</h1>
+        </section>
 
 
+        <section >
+            <h1>Slide 4 </h1>
         </section>
-<section>
-    <h2>done</h2>
-    <h2>done</h2>
-</section>
+
 
     </div>
 
 </div>
 
+
 <script src="../../bower_components/reveal.js/lib/js/head.min.js"></script>
 <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
 <script src="../../bower_components/reveal.js/js/reveal.js"></script>
-
-
-
-
 
 
 <script>
@@ -80,7 +70,7 @@
         controls: true,
         progress: true,
         history: false,
-        center: false,
+         center: true,
 
         transition: 'slide', // none/fade/slide/convex/concave/zoom
 
@@ -96,35 +86,9 @@
 
 
 
-Reveal.addEventListener('slidechanged', function (event) {
-    var $current = $(event.currentSlide);
-    var data = $current.data("background-animated-gif");
-
-    if (data){
-        var animationContainer = $current.children(".animated-gif-container");
-
-        var ua = window.navigator.userAgent;
-        ie = (ua.indexOf("MSIE ") >0) || (ua.indexOf('Trident/') > 0);
-        if (ie>0){
-            $(".animated-gif-img").remove();
-            data = data + "?load=" + new Date().getTime();
-        }
-        var children = $(animationContainer).children(".animated-gif-img");
-        if (children.length==0){
-        var img = $('<img class="animated-gif-img" style="min-width: 100%;min-height: 100%;height: auto;width: auto">').attr("src",data);
-        $(animationContainer).prepend(img)
-        } else {
-            children.each(function(i, e){
-                $(e).attr("src",data)
-            });
-        }
-
-
-    }
-
-});
 </script>
 
+<script src="../lib/reveal-intralinks.js"></script>
 
 </body>
 </html>
