@@ -17,7 +17,7 @@
     "tests"
   ],
   "dependencies": {
-    "reveal.js": "3.1.0",
+    "reveal.js": "git://github.com/rparree/reveal.js#webyarns",
     "jquery": "2.1.4",
     "bibi": "~0.998.3"
   }
