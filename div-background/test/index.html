@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>reveal.js - The HTML Presentation Framework</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="../../bower_components/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../../bower_components/reveal.js/css/theme/black.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="../../bower_components/reveal.js/lib/css/zenburn.css">
+
+
+    <!--[if lt IE 9]>
+    <script src="../../bower_components/reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<style>
+    .to-background {
+        width: 100%;
+        height: 100%;
+    }
+    .className{
+        position:absolute;
+        left:50%;
+        top:50%;
+        margin:-100px 0 0 -150px;
+        z-index: 1000;
+    }
+</style>
+<div class="reveal">
+    <div class="slides">
+
+        <section>
+            <h1>Start</h1>
+        </section>
+        <section data-transition="fade" data-background="images/town1.jpg" data-background-size="100% 100%" data-background-transition="none">
+          <div class="to-background" style="background-color: red">
+              <p class="className">foo</p>
+          </div>
+
+
+            <img  alt="image here" width="100%" height="100%" src="animations/rider3.gif">
+
+        </section>
+        <section>
+            <h2>after</h2>
+        </section>
+
+
+    </div>
+
+</div>
+
+
+<script src="../../bower_components/reveal.js/lib/js/head.min.js"></script>
+<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../../bower_components/reveal.js/js/reveal.js"></script>
+
+
+<script>
+
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: false,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+            {
+                src: '../../bower_components/reveal.js/lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            }
+            }
+        ]
+    });
+
+
+
+</script>
+<!--<script src="../lib/div-2-background.js"></script>-->
+</body>
+
+</html>
