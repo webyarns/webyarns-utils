@@ -1,6 +1,8 @@
 (($) ->
     fadeIn = (audioId) ->
         audioElement = document.getElementById(audioId)
+        if (audioElement == null)
+            console.error('cannot load audio for id ' + audioId)
         $audioElement = $(audioElement)
         $audioElement.stop(false)
         audioElement.volume = 0
@@ -23,7 +25,7 @@
         currentSounds.forEach((soundId) -> fadeOut(soundId))
 
 
-    #Reveal.addEventListener('ready', audioHandler)
-#    Reveal.addEventListener('slidechanged', audioHandler)
+    Reveal.addEventListener('ready', audioHandler)
+    Reveal.addEventListener('slidechanged', audioHandler)
     root = exports ? this
     root.audioHandler = audioHandler) jQuery
