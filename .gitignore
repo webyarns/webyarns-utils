@@ -78,6 +78,8 @@ project/plugins/project/
 
 # coffee
 *.map
-/sound-api/lib/audio-handlers.js
+/sound-api/lib/expiremental?/audio-handlers.js
 /sound-api/lib/audio-wip.js
-/sound-api/lib/audio-api.js
+/sound-api/lib/expiremental?/audio-api.js
+
+node_modules/
