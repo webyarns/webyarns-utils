@@ -1,8 +1,10 @@
 "use strict";
 
 /**
- * section@overlay-background: adds a second background over the default on
+ * section@data-overlay-background: adds a second background over the default on
  * use in conjunction with `section-id-to-bg-class` to set additional css styles such as
+ * Copies the transition from the default background. Can be overriden by using
+ * section@data-background2-transition
  *
  *  .reveal #bg-section-testSection .overlay-background {
         background-size: contain;
@@ -15,8 +17,9 @@ $(function () {
     function overlayHandler(e) {
         $(".overlay-background").removeClass("present");
 
-        var currentData = $(e.currentSlide).data('background2-image');
-        if (currentData) {
+        var bg2ImgValue = $(e.currentSlide).data('background2-image');
+
+        if (bg2ImgValue) {
 
             var bg = Reveal.getSlideBackground(event.indexh, event.indexv);
             var $bg = $(bg);
@@ -24,10 +27,17 @@ $(function () {
             if (children.size() > 0) {
                 children.addClass("present");
             } else {
-                $("<div class='slide-background present overlay-background'>").css({
+                var $2ndBg = $("<div class='slide-background present overlay-background'>").css({
                     "display": "block",
-                    "background-image": "url(" + currentData + ")"
-                }).appendTo($bg);
+                    "background-image": "url(" + bg2ImgValue + ")"
+                });
+                var bgTrValue = $bg.data('background-transition');
+                var bg2TrValue = $(e.currentSlide).data('background2-transition');
+                var transition = bg2TrValue || bgTrValue;
+                if (transition !== undefined) {
+                    $2ndBg.attr('data-background-transition', transition);
+                }
+                $2ndBg.appendTo($bg);
             }
         }
     }
