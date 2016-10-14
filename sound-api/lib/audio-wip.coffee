@@ -1,4 +1,7 @@
 (($) ->
+    getId = (s) ->
+        if s.startsWith("!") then s.substring(1) else s
+
     fadeIn = (audioId) ->
         audioElement = document.getElementById(audioId)
         if (audioElement == null)
@@ -20,10 +23,14 @@
         prevSoundData = $(e.previousSlide).data('sounds')
         currentSounds = prevSoundData?.split(",").map((e)->e.trim()) or []
         nextSounds.forEach (soundId) ->
-            fadeIn(soundId) if not (soundId in currentSounds)
-            currentSounds = currentSounds.filter (id) -> id isnt soundId
-        currentSounds.forEach((soundId) -> fadeOut(soundId))
-
+            if (soundId.startsWith("!"))
+                soundIdAlwaysRestart = getId(soundId)
+                fadeIn(soundIdAlwaysRestart)
+                currentSounds = currentSounds.filter (id) -> id isnt soundIdAlwaysRestart
+            else
+                fadeIn(soundId) if not (soundId in currentSounds)
+                currentSounds = currentSounds.filter (id) -> id isnt soundId
+        currentSounds.map((s) -> getId(s)).forEach((soundId) -> fadeOut(soundId))
 
     Reveal.addEventListener('ready', audioHandler)
     Reveal.addEventListener('slidechanged', audioHandler)
