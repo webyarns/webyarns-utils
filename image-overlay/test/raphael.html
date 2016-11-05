@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<!--suppress ALL -->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>escape</title>    
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  
+    
+    <!-- CSS REVEAL -->
+
+<link rel="stylesheet" href="css/theme/blood2.css" id="theme">
+    <link rel="stylesheet" href="css/reveal.min2.css">
+    <link rel="stylesheet" href="css/baseraphaeltestios.css" >
+    <link rel="stylesheet" href="css/baseraphaeltest.css" media="(min-width: 1024px)">
+<link rel="stylesheet" href="css/alldevices.css" />
+    <link rel="stylesheet" href="css/application.css">
+    
+    <!--[if lt IE 9]>
+  <script src="/js/html5shiv.js"></script>
+<![endif]-->
+
+    <script src="js/jquery.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+    <!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="css/zenburn.css">
+    <!-- AUDIO --> 
+    
+   <script defer src="js/audio-new.js"></script>
+
+<!--[if lt IE 9]>
+  <script src="/js/html5shiv.js"></script>
+<![endif]-->
+
+
+</head>
+
+<body>
+
+<style>
+    .reveal #bg-section-testSection .overlay-background{
+  
+    }
+</style>
+
+<audio id="intro2" class="auto" loop data-ignore>
+<source src="songs/intro.mp3" type="audio/mpeg">
+    <source src="songs/intro.ogg" type="audio/ogg">
+</audio>
+
+<audio id="tribalrock" class="auto" loop data-ignore>
+<source src="songs/tribalrock.mp3" type="audio/mpeg">
+    <source src="songs/tribalrock.ogg" type="audio/ogg">
+</audio>
+
+<audio id="cell" class="auto" data-ignore>
+<source src="songs/cell.mp3" type="audio/mpeg">
+    <source src="songs/cell.ogg" type="audio/ogg">
+</audio>
+
+<audio id="textsent" class="auto" data-ignore>
+<source src="songs/textsent.mp3" type="audio/mpeg">
+    <source src="songs/textsent.ogg" type="audio/ogg">
+</audio>
+
+<audio id="textsentdelayed" class="auto" data-ignore>
+<source src="songs/textsentdelayed.mp3" type="audio/mpeg">
+    <source src="songs/textsentdelayed.ogg" type="audio/ogg">
+</audio>
+
+<audio id="textreceived" class="auto" data-ignore>
+<source src="songs/textreceived.mp3" type="audio/mpeg">
+    <source src="songs/textreceived.ogg" type="audio/ogg">
+</audio>
+
+<audio id="textreceiveddelayed" class="auto" data-ignore>
+<source src="songs/textreceiveddelayed.mp3" type="audio/mpeg">
+    <source src="songs/textreceiveddelayed.ogg" type="audio/ogg">
+</audio>
+
+<audio id="textreceiveddelayed2" class="auto" data-ignore>
+<source src="songs/textreceiveddelayed2.mp3" type="audio/mpeg">
+    <source src="songs/textreceiveddelayed2.ogg" type="audio/ogg">
+</audio>
+
+<audio id="textreceiveddelayed3" class="auto" data-ignore>
+<source src="songs/textreceiveddelayed3.mp3" type="audio/mpeg">
+    <source src="songs/textreceiveddelayed3.ogg" type="audio/ogg">
+</audio>
+
+<audio id="game2" class="auto" loop data-ignore>
+<source src="songs/game2b.mp3" type="audio/mpeg">
+    <source src="songs/game2b.ogg" type="audio/ogg">
+</audio>
+
+<audio id="game3" class="auto" loop data-ignore>
+<source src="songs/game3.mp3" type="audio/mpeg">
+    <source src="songs/game3.ogg" type="audio/ogg">
+</audio>
+
+<audio id="police3" class="auto" data-ignore>
+<source src="songs/police3.mp3" type="audio/mpeg">
+    <source src="songs/police3.ogg" type="audio/ogg">
+</audio>
+
+<audio id="police4" class="auto" data-ignore>
+<source src="songs/police4.mp3" type="audio/mpeg">
+    <source src="songs/police4.ogg" type="audio/ogg">
+</audio>
+
+<audio id="police5" class="auto" data-ignore>
+<source src="songs/police5.mp3" type="audio/mpeg">
+    <source src="songs/police5.ogg" type="audio/ogg">
+</audio>
+
+<audio id="police6" class="auto" data-ignore>
+<source src="songs/police6.mp3" type="audio/mpeg">
+    <source src="songs/police6.ogg" type="audio/ogg">
+</audio>
+
+<audio id="phonecall" class="auto" loop data-ignore>
+<source src="songs/phonecall.mp3" type="audio/mpeg">
+    <source src="songs/phonecall.ogg" type="audio/ogg">
+</audio>
+
+
+
+<!-- ----------- -->
+<div class="reveal">
+    <div class="slides">
+    <!-- ----------- -->
+
+<!-- too many police at border----------- -->
+   
+  <section data-background="animations/text14.gif" data-background-replay  data-transition="none" data-background-transition="none" data-sounds="tribalrock,textsent">
+  
+</section>
+
+<!-- Alamo, San Antonio, 2moro?----------- -->
+   
+  <section data-background="animations/text15.gif" data-background-replay  data-transition="none" data-background-transition="none" data-sounds="tribalrock,textsent">
+  
+</section>
+
+<!-- yesyesyesyesyesemojis----------- -->
+   
+  <section data-background="animations/text16.gif" data-background-replay  data-transition="none" data-background-transition="none" data-sounds="tribalrock,textreceiveddelayed2">
+  
+</section>
+
+<!-- email1 TRANSITION TO ELIZABETH !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!----------- -->
+
+<section id="testSection" data-background2-image="images/email1.jpg" data-background-image="images/pink.jpg" data-background-size="100% 100%" data-transition="cube" data-background2-transition="none" data-sounds="tribalrock">
+
+     <img class="animated-background2" id="part3-bg" width="200" height="135" data-gif="2" src=""/>
+
+</section>
+
+<!-- email2 d's reply----------- -->
+
+<section id="testSection" data-background2-image="images/email2.jpg" data-background-image="images/pink.jpg" data-background-size="100% 100%" data-transition="none" data-background2-transition="none" data-sounds="tribalrock">
+
+</section>
+
+<!-- email3 TRASH----------- -->
+
+<section id="testSection" data-background2-image="animations/email3.gif" data-background-image="images/pink.jpg" data-background-size="100% 100%" data-transition="none" data-background2-transition="none" data-sounds="tribalrock">
+
+</section>
+
+<!-- email2 BUTTON CLICKED----------- -->
+
+<section id="testSection" data-background2-image="animations/email3STILL.jpg" data-background-image="images/pink.jpg" data-background-size="100% 100%" data-transition="none" data-background2-transition="none" data-sounds="tribalrock" data-right-only-section data-auto-move-to="46" data-auto-move-time-sec=".1">
+
+</section>
+
+
+<!-- 360E2 MAP MOVE----------- -->
+
+<section id="testSection" data-background2-image="animations/360E2.gif"  data-background-image="images/pink.jpg" data-background-size="100% 100%" data-transition="none" data-background2-transition="none" data-sounds="tribalrock">
+
+</section>
+
+<!-- 360E3 TRANSITION----------- -->
+
+<section id="testSection" data-background2-image="images/360E3.jpg" data-background-image="images/pink.jpg" data-background-size="100% 100%" data-transition="none" data-background2-transition="none" data-right-only-section data-auto-move-to="48" data-auto-move-time-sec=".1" data-sounds="tribalrock">
+
+</section>
+
+<!-- 360E4 INVITE CODE----------- -->
+
+<section id="testSection" data-background2-image="animations/360E4.gif" data-background-replay data-background-image="images/pink.jpg" data-background-size="100% 100%" data-transition="none" data-background2-transition="none" data-sounds="tribalrock">
+
+</section>
+
+<!-- 360E4 DONE----------- -->
+
+<section id="testSection" data-background2-image="animations/360E4b.jpg" data-background-image="images/pink.jpg" data-background-size="100% 100%" data-transition="none" data-background2-transition="none" data-sounds="tribalrock" data-right-only-section data-auto-move-to="50" data-auto-move-time-sec=".1">
+
+</section>
+
+
+
+<!-- ----------- -->
+
+</div>
+</div>
+    
+    <script src="js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+        	
+<script src="js/slide-attrb.js"></script>
+<script src="js/audio-ipad-initialiser.js"></script>
+<script src="js/timed-section.js"></script>
+
+<script>
+    Reveal.initialize({
+        controls: false,
+        progress: true,
+        history: false,
+		slideNumber: false,
+		overview: false,
+		hideAddressBar: true,
+        center: false,
+        theme: 'moon',// default/beige/sky/moon/night/serif/simple/base/blood/solarized
+        rollingLinks: false,
+        loop: false,
+        width: '100%',
+        margin: '0',
+		touch: true,
+        height: '100%',
+        keyboard: true,
+        transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+        dependencies: [
+					{ src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true }
+        ]
+    });
+
+</script>
+
+
+<script language=javascript>
+    animations = [];
+    animations[0] =
+
+        <!-- bluein.psd in-->
+            "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";
+			
+			<!-- blueout.psd out-->
+			
+	animations[1] =		
+			"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";
+			
+			<!-- pinkin.psd in-->
+			
+	animations[2] =		
+			"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";
+			
+			<!-- pinkout.psd out-->
+			
+	animations[3] =			
+			"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";
+
+          Reveal.addEventListener('slidechanged', initAnimatedGifsAndSounds);
+    Reveal.addEventListener('ready', initAnimatedGifsAndSounds);
+
+Reveal.addEventListener('slidechanged', function (event) {
+        var $currentSide = $(event.currentSlide);
+        var $previousSlide = $(event.previousSlide);
+        $previousSlide.find(".slideshow").cycle('pause');
+        if (!$currentSide.data("slideshowInitialised"
+)) {
+            var $slideShow = $currentSide.find(".slideshow");
+            var conf = $slideShow.data('cycleObj')  || { fx: 'zoom', delay: -2000 }; // DEFAULT 
+            $slideShow.cycle(conf);
+            $currentSide.data("slideshowInitialised", true)
+        } else $(".slideshow").cycle("resume");
+
+
+    });
+
+    $(function () {
+
+        connectSlideshowToAudio("audio_foils","s1");
+        connectSlideshowToAudio("audio_foils2","s2");
+
+        // Override the default for #s2
+         $("#s2").data('cycleObj', {
+            fx:      'zoom', 
+           speedIn:  2000, 
+           speedOut: 100, 
+           easeIn:  'easeInBounce', 
+           easeOut: 'easeOutElastic', 
+
+          delay:   -4000, 
+          next:   '#s2',
+          timeout: 0 
+       });
+
+       
+function connectSlideshowToAudio(audioElementId, slideId) {
+            
+var $audio = $("#"+audioElementId);
+
+            var $slides = $("#"+slideId);
+            $audio.on('pause', function () {
+                $slides.cycle("pause");
+            });
+            $audio.on('play', function () {
+                $slides.cycle("resume");
+            });
+            $audio.on('ended', function () {
+                $slides.cycle("pause");
+            });
+        }
+
+
+    });
+	
+
+	 
+
+
+    function initAnimatedGifsAndSounds(event) {
+
+        if (event.previousSlide) {
+
+            var audioPrevId = $(event.previousSlide).data("sound-id");
+            if (audioPrevId)
+                document.getElementById(audioPrevId).load();
+
+            var e = ".animated-background.present";
+
+            var $2 = $(e);
+            if ($2.length == 1) {
+                $2.attr('src', "");
+                $2.prependTo($(event.previousSlide));
+                $2.removeClass("present");
+            }
+			
+			var e = ".animated-background2.present";
+
+            var $2 = $(e);
+            if ($2.length == 1) {
+                $2.attr('src', "");
+                $2.prependTo($(event.previousSlide));
+                $2.removeClass("present");
+            }
+        }
+
+        var audioCurId = $(event.currentSlide).data("sound-id");
+        if (audioCurId) {
+            document.getElementById(audioCurId).play();
+        }
+
+        $('.animated-background', event.currentSlide).each(function (i, e) {
+            var animationIdx = $(e).attr("data-gif");
+            $(e).attr('src', "data:image/gif;base64," + animations[animationIdx]);
+            $(e).prependTo(".reveal");
+            $(e).addClass("present");
+
+        });
+		$('.animated-background2', event.currentSlide).each(function (i, e) {
+            var animationIdx = $(e).attr("data-gif");
+            $(e).attr('src', "data:image/gif;base64," + animations[animationIdx]);
+            $(e).prependTo(".reveal");
+            $(e).addClass("present");
+
+        });
+    }
+</script>
+
+
+    <script src="js/reveal-intralinks.js"></script>
+<script src="js/ending.js"></script>
+<script src="js/section-id-to-bg-class.js"></script>
+
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/replay-animate-bg-compiled.js"></script>
+
+<script src="js/section-id-to-bg-class-compiled.js"></script>
+<script src="js/img-overlay-compiled.js"></script>
+
+ <script src="js/audio-wip.js"></script>   
+</body>
+</html>
