@@ -83,3 +83,4 @@ project/plugins/project/
 /sound-api/lib/expiremental?/audio-api.js
 
 node_modules/
+*-compiled.js
